@@ -1,0 +1,15 @@
+<div class="py-2">
+  <a class="text-blue-600" href="<%= root_url(q: params[:q]) %>">&lt;- back</a>
+</div>
+
+<div class="flex items-center py-2">
+  <h1
+    class="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl"
+  >
+    <%= @company.name %>
+  </h1>
+</div>
+
+<p class="py-4"><%= @company.description %></p>
+
+<%= render(partial: 'register', locals: {company: @company}) %>

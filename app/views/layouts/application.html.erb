@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hot Stocks</title>
+    <%= csrf_meta_tags %> <%= csp_meta_tag %>
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="container mx-auto box-border"><%= yield %></div>
+  </body>
+</html>

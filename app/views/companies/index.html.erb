@@ -1,0 +1,28 @@
+<div class="flex items-center py-2">
+  <h1
+    class="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl"
+  >
+    Companies
+  </h1>
+
+  <form class="ml-4 w-1/4">
+    <input
+      class="w-full border-solid border-2 border-gray-600 rounded p-1"
+      name="q"
+      value="<%= params[:q] %>"
+      placeholder="search"
+    />
+  </form>
+</div>
+
+<% if @companies.any? %>
+  <%= render(partial: 'list', locals: { companies: @companies }) %>
+<% elsif params[:q].blank? %>
+  <div>
+    Search by symbol, name, or description.
+  </div>
+<% else %>
+  <div>
+    Nothing found when searching <strong><%= params[:q] %></strong>.
+  </div>
+<% end %>

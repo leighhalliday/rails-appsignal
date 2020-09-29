@@ -1,0 +1,1 @@
+# Using AppSignal with Rails
